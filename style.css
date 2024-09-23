@@ -1,0 +1,140 @@
+body,
+textarea {
+  font-family: Arial, sans-serif;
+}
+
+
+header,
+footer,
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+label {
+  /* display: block;*/
+  margin-bottom: 8px;
+}
+
+img {
+  max-width: 526px;
+}
+
+
+.alert {
+  position: relative;
+  top: 10;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  margin-bottom: 16px;
+  line-height: 1.8;
+  border-radius: 5px;
+  cursor: hand;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+.notice {
+  background-color: #EFF;
+  border: 1px solid #DEE;
+  color: #9AA;
+}
+
+input {
+  /*width: 100%;*/
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+input[type="number"] {
+  width: 10em;
+}
+
+#imageInput {
+  margin-bottom: 16px;
+}
+
+fieldset {
+  margin-bottom: 2em;
+}
+
+option {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  outline: 0;
+  padding: 10px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Style for disabled buttons */
+button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+
+textarea {
+  width: 100%;
+}
+
+@media print {
+  /* All your print styles go here */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    page-break-after: avoid;
+  }
+}
+
+title.invisible {
+  display: none;
+}
+
+#formalia fieldset div {
+  display: flex;
+  align-items: center; /* Vertical center alignment */
+  margin-bottom: 10px; /* Add some spacing between each label-input pair */
+}
+
+#formalia fieldset div label {
+  width: 120px; /* Set a fixed width for labels */
+  text-align: right; /* Align labels to the right */
+  margin-right: 10px; /* Add some spacing between labels and inputs */
+}
+
+/* Adjust input field styles as needed */
+#formalia fieldset div input,
+#formalia fieldset div select {
+  flex: 1; /* Allow input fields to grow and fill the available space */
+  height: 60px; /* Set a fixed height for inputs */
+}
+
+#otherCitation {
+  margin-bottom: 0px;;
+}
+
+#literature {
+    text-indent: 1em; /* You can adjust the indentation as needed */
+}

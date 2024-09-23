@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MC-Aufgabe SoSe24</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Teilleistung MC-Aufgabe<br />Sommersemester 2024</h1>
+    </header>
+
+    <form id="myForm">
+      <!----------------------------------------------------------------------------------------------------->
+      <div class="alert notice">
+        Das Formular wurde für die Browser Firefox und Chrome getestet. Am besten probieren Sie Zwischenspeichern, Laden (F5) und PDF exportieren aus, bevor Sie Ihre Inhalte einfügen.
+      </div>
+      <section id="formalia">
+        <fieldset>
+          <legend>Formale Angaben</legend>
+          <div>
+            <label for="matricsInput">Matrikelnummer*:</label>
+            <input
+              type="text"
+              id="matricsInput"
+              name="matricsInput"
+              pattern="[0-9]{7}"
+              placeholder="Geben Sie die Matrikelnummer als 7 Ziffern ohne Leerzeichen ein!"
+              required
+            />
+          </div>
+          <div>
+            <label for="Abgabe">Schwerpunkt*:</label>
+            <select id="Abgabe" name="Abgabe" required>
+              <option value="" selected disabled hidden>Wählen Sie!</option>
+              <option value="1_Analyse">1 Analyse</option>
+              <option value="2_Design">2 Design</option>
+              <option value="3_Evaluation">3 Evaluation</option>
+            </select>
+          </div>
+        </fieldset>
+      </section>
+      <!----------------------------------------------------------------------------------------------------->
+      <section>
+        <h2>MC-Aufgabe</h2>
+        <h3>Frage</h3>
+        <fieldset id="textIntroInput">
+          <legend>Einleitung:</legend>
+          <label for="einleitungInput">
+            <p>
+              Formulieren Sie eine Vignette, Ausgangslage oder Problemstellung
+              zu Ihrer Aufgabe!
+            </p></label
+          >
+          <textarea
+            class="textarea-large unrestricted"
+            id="einleitungInput"
+            name="einleitungInput"
+            rows="5"
+            cols="80"
+          ></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Frage oder Arbeitsanweisung:</legend>
+          <label for="questionInput">
+            <p>
+              Formulieren Sie die konkret zu beantwortende Frage oder zu
+              erledigende Aufgabe!
+            </p></label
+          >
+          <textarea
+            class="textarea-small no-image"
+            rows="2"
+            cols="80"
+            id="questionInput"
+            name="questionInput"
+          ></textarea>
+        </fieldset>
+
+        <h3>Antworten</h3>
+        <fieldset>
+          <legend>Richtige Antwort:</legend>
+          <label for="answerCorrectInput">
+            <p>Formulieren Sie die richtige oder beste Lösung!</p> </label
+          ><textarea
+            class="textarea-small unrestricted"
+            rows="2"
+            cols="80"
+            id="answerCorrectInput"
+            name="answerCorrectInput"
+          ></textarea>
+        </fieldset>
+        <fieldset>
+          <legend>Falsche Antwort 1:</legend>
+          <label for="answerFalse1Input">
+            <p>
+              Formulieren Sie eine Antwort, die im Kontext der Frage falsch oder
+              nicht die beste Lösung ist!
+            </p> </label
+          ><textarea
+            class="textarea-small unrestricted"
+            rows="2"
+            cols="80"
+            id="answerFalse1Input"
+            name="answerFalse1Input"
+          ></textarea>
+        </fieldset>
+        <fieldset>
+          <legend>Falsche Antwort 2:</legend>
+          <label for="answerFalse2Input">
+            <p>
+              Formulieren Sie eine Antwort, die im Kontext der Frage falsch oder
+              nicht die beste Lösung ist!
+            </p></label
+          >
+          <textarea
+            class="textarea-small unrestricted"
+            rows="2"
+            cols="80"
+            id="answerFalse2Input"
+            name="answerFalse2Input"
+          ></textarea>
+        </fieldset>
+      </section>
+
+      <h2>Begründungen</h2>
+      <fieldset>
+        <legend>Begründung der Themenauswahl (max. 300 Wörter):</legend>
+        <label for="reasonIntroduction"></label>
+        <textarea
+          class="textarea-large restricted"
+          id="reasonIntroduction"
+          name="reasonIntroduction"
+          rows="10"
+        ></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Begründung der Antworten (max. 300 Wörter):</legend>
+        <label for="reasonAnswers"
+          ><p>
+            Begründen Sie für jede Antwort einzeln, weshalb die jeweilige
+            Antwort im Rahmen der Aufgabenstellung eher richtig oder eher falsch
+            ist!
+          </p></label
+        >
+        <textarea
+          class="textarea-large restricted"
+          id="reasonAnswers"
+          name="reasonAnswers"
+          rows="10"
+        ></textarea>
+      </fieldset>
+
+      <h2>Optionales Literaturverzeichnis</h2>
+      <section>
+        <fieldset>
+          <legend>Literaturverzeichnis:</legend>
+          <label for="literature">
+            <p>
+              Wenn Sie zusätzliche externe Quellen verwenden, geben Sie diese
+              hier an.
+            </p></label
+          >
+          <textarea
+            class="textarea-large no-image"
+            id="literature"
+            name="literature"
+            rows="10"
+          ></textarea>
+        </fieldset>
+        <fieldset class="citation-container">
+          <legend>Verwendete Richtlinie:</legend>
+          <label for="citation">Ich zitiere nach </label>
+          <select id="citation">
+            <option value="keine" selected disabled hidden>Wählen Sie!</option>
+            <option value="DGPs 5">DGPs 5</option>
+            <option value="APA 7">APA 7</option>
+            <option value="others">andere</option>
+          </select>
+
+          <div class="vis-container" style="display: none">
+            <label for="otherCitation">, und zwar </label>
+            <input type="text" id="otherCitation" />
+          </div>
+        </fieldset>
+      </section>
+      <!----------------------------------------------------------------------------------------------------->
+      <button type="button" id="printPDF" onclick="exportToPDF()">
+        PDF exportieren
+      </button>
+      <button type="button" onclick="saveProgress()">Zwischenspeichern</button>
+      <button type="button" onclick="resetForm()">Eingaben löschen</button>
+      <button
+        type="button"
+        id="deleteLocalStorageButton"
+        onclick="resetStorage()"
+      >
+        Speicher löschen
+      </button>
+    </form>
+
+
+    <script
+      type="text/javascript"
+      src="tinymce/js/tinymce/tinymce.min.js"
+      referrerpolicy="origin"
+    ></script>
+    <script type="text/javascript">
+      tinymce.init({
+        selector: ".restricted",
+        promotion: false,
+        license_key: "gpl",
+        plugins: "autoresize image wordcount lists",
+        contextmenu: "image",
+        min_height: 100,
+        file_picker_types: "image",
+        menubar: "edit insert format tools",
+        setup: function (editor) {
+          const wordLimit = 300;
+          let warningNotification = null;
+          const printButton = document.getElementById("printPDF");
+          editor.on("init", function (e) {
+            console.log("The Editor has initialized.");
+          });
+          editor.on("blur", function (e) {
+            let wordcount = tinymce.activeEditor.plugins.wordcount;
+            let numWords = wordcount.body.getWordCount();
+            console.log(numWords);
+            if (numWords > wordLimit) {
+              printButton.setAttribute("disabled", true);
+              if (!warningNotification) {
+                warningNotification = createWarningNotification();
+              }
+            } else {
+              printButton.removeAttribute("disabled");
+              if (warningNotification) {
+                warningNotification.close();
+                warningNotification = null;
+              }
+            }
+          });
+
+          editor.on("drop", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (e.dataTransfer.files.length > 0) {
+              const file = e.dataTransfer.files[0];
+              handleUpload(file);
+            }
+          });
+          editor.on("paste", function (e) {
+            if (e.clipboardData.files.length > 0) {
+              const file = e.clipboardData.files[0];
+              handleUpload(file);
+              e.preventDefault();
+              e.stopPropagation();
+            }
+          });
+        },
+        /* and here's our custom image picker*/
+        file_picker_callback: function (cb, value, meta) {
+          var input = document.createElement("input");
+          input.setAttribute("type", "file");
+          input.setAttribute("accept", "image/*");
+          input.onchange = function () {
+            var file = this.files[0];
+            handleUpload(file);
+          };
+          input.click();
+        },
+        content_style:
+          "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+      });
+      tinymce.init({
+        selector: ".unrestricted",
+        promotion: false,
+        license_key: "gpl",
+        plugins: "autoresize image lists",
+        contextmenu: "image",
+        min_height: 100,
+        file_picker_types: "image",
+        menubar: "edit insert format tools",
+        toolbar: "image |numlist bullist",
+        statusbar: false,
+        setup: function (editor) {
+          const wordLimit = 300;
+          editor.on("init", function (e) {
+            console.log("The Editor has initialized.");
+          });
+          editor.on("drop", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (e.dataTransfer.files.length > 0) {
+              const file = e.dataTransfer.files[0];
+              handleUpload(file);
+            }
+          });
+          editor.on("paste", function (e) {
+            if (e.clipboardData.files.length > 0) {
+              const file = e.clipboardData.files[0];
+              handleUpload(file);
+              e.preventDefault();
+              e.stopPropagation();
+            }
+          });
+        },
+
+        /* and here's our custom image picker*/
+        file_picker_callback: function (cb, value, meta) {
+          var input = document.createElement("input");
+          input.setAttribute("type", "file");
+          input.setAttribute("accept", "image/*");
+          input.onchange = function () {
+            var file = this.files[0];
+            handleUpload(file);
+          };
+          input.click();
+        },
+        content_style:
+          "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+      });
+
+      tinymce.init({
+        selector: ".no-image",
+        indentation: "20pt",
+        indent_use_margin: true,
+        promotion: false,
+        license_key: "gpl",
+        plugins: "autoresize",
+        min_height: 100,
+        menubar: "edit format",
+        toolbar: false,
+        statusbar: false,
+        setup: function (editor) {
+          editor.on("init", function (e) {
+            console.log("The Editor has initialized.");
+          });
+          editor.on("drop", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+          });
+          editor.on("paste", function (e) {
+            if (e.clipboardData.files.length > 0) {
+              e.preventDefault();
+              e.stopPropagation();
+            }
+          });
+        },
+        content_style:
+          "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+      });
+    </script>
+  </body>
+</html>
